@@ -1,27 +1,45 @@
-﻿# Smart_Home_Simulator_demo
-
 # 🏠 Smart Home IoT Simulator
 
-A Python-based IoT simulation project that mimics a smart home system using MQTT protocol.  
-Devices (temperature sensor, light, door lock) publish their status, and a controller subscribes to automate responses.
+This project is a simple **IoT Smart Home simulator** built with Python and MQTT.  
+It simulates basic smart devices like **Lights, Fan, and Door Lock/Unlock** and shows how they can publish and subscribe to MQTT topics.
+
+---
 
 ## 🚀 Features
-- Simulates IoT devices without extra hardware  
-- Publishes data to MQTT broker (HiveMQ public broker)  
-- Controller reacts with automation logic (AC, lights, door lock)  
-- 100% software-based, runs in VS Code  
+- Turn **Lights** ON/OFF
+- Turn **Fan** ON/OFF
+- Lock/Unlock **Door**
+- Real-time communication between publisher and subscriber
+- Uses **MQTT Broker** for message passing
 
-## 🛠 Tech Stack
-- Python  
-- paho-mqtt (MQTT client)  
-- HiveMQ public broker  
+---
 
-## 📂 Files
-- `smart_home_publisher.py` → Simulated devices  
-- `smart_home_controller.py` → Automation controller  
+## 📂 Project Structure
+smart_home_sim/
+── smart_home_sim.py   # Publishes commands (Light, Fan, Door) Also Subscribes & listens to device updates
+── README.md                 # Project documentation
 
-## ▶️ How to Run
-```bash
-pip install paho-mqtt
-python smart_home_publisher.py
-python smart_home_controller.py
+## ▶️USAGE
+In a New Terminal run
+python smart_home_sim.py
+
+## 📸Example Output
+Sent: Light ON
+Received: Light ON on topic iot/smart_home/devices
+
+Sent: Door Locked
+Received: Door Locked on topic iot/smart_home/devices
+
+## 🎯 Future Improvements
+	•	Add more devices (AC, TV, Sensors)
+	•	Create a GUI dashboard
+	•	Deploy on Raspberry Pi / ESP32 for real hardware simulation
+
+⸻
+
+## 👨‍💻 Author
+
+Made  by Tauqeer Zia
+
+
+
